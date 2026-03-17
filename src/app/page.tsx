@@ -19,7 +19,7 @@ const HIGHLIGHT_COUNTRIES = [
   "USA", "CHN", "JPN", "DEU", "IND", "GBR", "FRA", "CAN", "BRA", "ITA",
 ];
 
-const IMF_API = "https://www.imf.org/external/datamapper/api/v1";
+const IMF_API = "/api/imf";
 
 // ─── Types ───────────────────────────────────────────────────────────
 interface CountryTimeSeries {

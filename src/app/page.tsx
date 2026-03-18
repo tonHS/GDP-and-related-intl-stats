@@ -143,8 +143,8 @@ export default function Dashboard() {
     setError(null);
     try {
       const res = await fetch(`${IMF_API}/${indicator}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
+      if (!res.ok) throw new Error(json.error ?? `HTTP ${res.status}`);
       const values: CountryTimeSeries = json.values?.[indicator] ?? {};
       setSeriesData(values);
       setLastUpdated(new Date().toLocaleString());
